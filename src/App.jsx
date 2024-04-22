@@ -1,6 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Layout from "./components/Layout/LayoutContainer"
+import Layout from "./components/Layout/Layout"
 import DevSample from "./components/DevSamples/DevSample"
+import Home from "./components/Home/Home"
+import About from "./components/About/About"
+import Gallery from "./components/Gallery/Gallery"
+import Pricing from "./components/Pricing/Pricing"
+import Contact from "./components/Contact/Contact"
 
 
 function App() {
@@ -9,11 +14,11 @@ function App() {
     <BrowserRouter>
       <Layout>
         <Routes>
-          <Route path="/" element={<DevSample name={'HOME'}/>}/>
-          <Route path="/about" element={<DevSample name={'ABOUT'}/>}/>
-          <Route path="/gallery" element={<DevSample name={'GALLERY'}/>}/>
-          <Route path="/pricing" element={<DevSample name={'PRICING'}/>}/>
-          <Route path="/contact" element={<DevSample name={'CONTACT'}/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/gallery" element={<Gallery/>}/>
+          <Route path="/pricing" element={<Pricing/>}/>
+          <Route path="/contact" element={<Contact/>}/>
           <Route path="*" element={<DevSample name={'ERROR 404 - NOT FOUND'}/>}/>
         </Routes>
       </Layout>
