@@ -11,10 +11,9 @@ import ListIcon from "@mui/icons-material/List";
 import { Divider } from "@mui/material";
 
 import NavItem from "../Navbar/NavItem";
+import ContactIcons from "../../Footer/Contact/ContactIcons";
 
 const SideBar = () => {
-	
-
 	const [state, setState] = React.useState({
 		top: false,
 		left: false,
@@ -35,42 +34,45 @@ const SideBar = () => {
 
 	const list = (anchor) => (
 		<Box
-			sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+			sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 , display:"flex" , flexDirection:"column" , height:"100%"}}
 			role="presentation"
 			onClick={toggleDrawer(anchor, false)}
 			onKeyDown={toggleDrawer(anchor, false)}
 		>
-			<List className="font-semibold">
+			<List className="font-semibold text-2xl h-3/4 flex flex-col justify-center">
 				<ListItem disablePadding>
-					<ListItemButton>
-						<NavItem nombre={"Home"} to={"/"} className={"w-full"} />
+					<ListItemButton sx={{p:0}}>
+						<NavItem nombre={"Home"} to={"/"} className={"w-full ps-4 py-2"} />
 					</ListItemButton>
 				</ListItem>
 
 				<ListItem disablePadding>
-					<ListItemButton>
-						<NavItem nombre={"About"} to={"/about"} className={"w-full"} />
+					<ListItemButton sx={{p:0}}>
+						<NavItem nombre={"About"} to={"/about"} className={"w-full ps-4 py-2"} />
 					</ListItemButton>
 				</ListItem>
 
 				<ListItem disablePadding>
-					<ListItemButton>
-						<NavItem nombre={"Gallery"} to={"/gallery"} className={"w-full"} />
+					<ListItemButton sx={{p:0}}>
+						<NavItem nombre={"Gallery"} to={"/gallery"} className={"w-full ps-4 py-2"} />
 					</ListItemButton>
 				</ListItem>
 				<ListItem disablePadding>
-					<ListItemButton>
-						<NavItem nombre={"Pricing"} to={"/pricing"} className={"w-full"} />
+					<ListItemButton sx={{p:0}}>
+						<NavItem nombre={"Pricing"} to={"/pricing"} className={"w-full ps-4 py-2"} />
 					</ListItemButton>
 				</ListItem>
 				<ListItem disablePadding>
-					<ListItemButton>
-						<NavItem nombre={"Contact"} to={"/contact"} className={"w-full"} />
+					<ListItemButton sx={{p:0}}>
+						<NavItem nombre={"Contact"} to={"/contact"} className={"w-full ps-4 py-2"} />
 					</ListItemButton>
 				</ListItem>
 			</List>
-			<Divider />
-			{/* <ContactContainer/> */}
+			<div className="flex flex-col text-sm text-gray-6 00 h-1/4 justify-center ps-4 py-2">
+				<ContactIcons />
+				<span className="pt-3">Scribble Solutions FL</span>
+				<span>All rights reserved</span>
+			</div>
 		</Box>
 	);
 

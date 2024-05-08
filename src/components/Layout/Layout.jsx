@@ -5,15 +5,15 @@ import Footer from "./Footer/Footer";
 
 const Layout = ({ children }) => {
 	return (
-		<div>
+		<div className="w-screen">
 			<Header />
 			{children}
 			<Link to={"https://wa.me/16892411744"} target="_blank">
 				<img
 					className={
-						"fixed z-30 bottom-7 right-1 h-[75px] w-[75px] bg-transparent"
+						"fixed z-30 bottom-7 right-5 h-10 w-10 "
 					}
-					src="https://static.vecteezy.com/system/resources/previews/021/460/383/original/whatsapp-logo-free-png.png"
+					src="https://res.cloudinary.com/dbwomkmnq/image/upload/f_auto,q_auto/v1/Scribble/ebmcodfyskxkjmdlrsr3"
 					alt=""
 				/>
 			</Link>
