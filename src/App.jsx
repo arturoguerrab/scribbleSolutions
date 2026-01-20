@@ -1,17 +1,17 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Layout from "./components/Layout/Layout"
-import DevSample from "./components/DevSamples/DevSample"
-import Home from "./components/Home/Home"
-import About from "./components/About/About"
-import Gallery from "./components/Gallery/Gallery"
-import Pricing from "./components/Pricing/Pricing"
-import Contact from "./components/Contact/Contact"
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./components/layout/Layout";
+import DevSample from "./components/DevSamples/DevSample";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
+import Gallery from "./pages/Gallery/Gallery";
+import Pricing from "./pages/Pricing/Pricing";
+import Contact from "./pages/Contact/Contact";
+import ScrollToTop from "./components/utils/ScrollToTop"; // Import ScrollToTop
 
 function App() {
-
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <ScrollToTop /> {/* Add ScrollToTop here */}
       <Layout>
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -26,4 +26,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

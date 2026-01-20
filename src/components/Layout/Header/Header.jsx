@@ -1,22 +1,22 @@
 import React from "react";
-
-import TogglersContainer from "./Togglers/TogglersContainer.jsx";
-
-
 import { NavLink } from "react-router-dom";
 import SideBar from "./SideBar/SideBar.jsx";
 import Navbar from "./Navbar/Navbar.jsx";
 
 const Header = () => {
 	return (
-		<header className={"fixed z-20 w-full px-4 lg:px-6 lg:py-4 bg-white"}>
-			<div className="flex justify-between items-center">
+		<header className="fixed top-0 left-0 w-full z-50 px-6 py-4 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-white/20 shadow-sm">
+			<div className="container mx-auto flex justify-between items-center">
+                {/* Mobile Sidebar */}
 				<SideBar />
-				<NavLink to={"/"}>
-					<img src="https://res.cloudinary.com/dbwomkmnq/image/upload/f_auto,q_auto/v1/Scribble/jrb12jwl8xqarm4vmagj" alt="" className="h-6" />
+				
+                {/* Logo */}
+                <NavLink to={"/"} className="relative z-50 transform hover:scale-105 transition-transform duration-300">
+					<img src="https://res.cloudinary.com/dbwomkmnq/image/upload/f_auto,q_auto/v1/Scribble/jrb12jwl8xqarm4vmagj" alt="Scribble Logo" className="h-8 md:h-10" />
 				</NavLink>
-				<Navbar/>
-				{/* <TogglersContainer /> */}
+				
+                {/* Desktop Nav */}
+                <Navbar/>
 			</div>
 		</header>
 	);
