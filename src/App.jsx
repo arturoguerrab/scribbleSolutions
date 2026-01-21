@@ -11,7 +11,7 @@ import ScrollToTop from "./components/utils/ScrollToTop"; // Import ScrollToTop
 function App() {
   return (
     <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <ScrollToTop /> {/* Add ScrollToTop here */}
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home/>}/>

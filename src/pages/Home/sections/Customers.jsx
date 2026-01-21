@@ -1,4 +1,5 @@
 import React from "react";
+import BackgroundScribbles from "../../../components/BackgroundScribbles/BackgroundScribbles";
 
 const ReviewCard = ({ name, review, color, rotation }) => (
     <div className={`bg-white p-6 shadow-xl relative transform ${rotation} hover:scale-105 hover:rotate-0 transition-all duration-300 md:w-[350px] flex-shrink-0`}>
@@ -34,7 +35,8 @@ const Customers = () => {
 	];
 
 	return (
-		<div className="w-full py-20 px-6 bg-brand-dark/5 overflow-hidden">
+		<div className="w-full py-20 px-6 bg-brand-dark/5 overflow-hidden relative">
+            <BackgroundScribbles variant="grid" />
 			<div className="container mx-auto flex flex-col items-center">
 				<div className="text-center mb-16">
                     <p className="text-brand-pink font-bold uppercase tracking-widest mb-2">Community</p>

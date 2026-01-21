@@ -1,4 +1,5 @@
 import React from "react";
+import BackgroundScribbles from "../../../components/BackgroundScribbles/BackgroundScribbles";
 
 const FeatureBox = ({ color, title, subtitle, icon, rotation }) => (
     <div className={`relative group md:w-1/3`}>
@@ -28,6 +29,7 @@ const FeatureBox = ({ color, title, subtitle, icon, rotation }) => (
 const WeHave = () => {
 	return (
 		<div className="relative w-full py-20 px-6 mt-10 md:mt-0">
+            <BackgroundScribbles variant="mixed" />
 			
 			<div className="container mx-auto max-w-6xl flex flex-col gap-16">
                 {/* Section Header */}

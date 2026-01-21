@@ -1,4 +1,5 @@
 import React from "react";
+import BackgroundScribbles from "../../../components/BackgroundScribbles/BackgroundScribbles";
 
 const StepItem = ({ number, title, desc, icon, color, delay }) => (
     <div className={`flex flex-col items-center text-center gap-4 relative group w-full md:w-1/4`}>
@@ -22,7 +23,8 @@ const StepItem = ({ number, title, desc, icon, color, delay }) => (
 
 const Steps = () => {
 	return (
-		<div className="w-full py-24 px-6 overflow-hidden">
+		<div className="w-full py-24 px-6 overflow-hidden relative">
+            <BackgroundScribbles variant="dots" />
 			<div className="container mx-auto max-w-6xl relative">
                 
                 {/* Header */}

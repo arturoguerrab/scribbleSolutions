@@ -1,24 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const NavItem = ({ nombre, to, isButton = false }) => {
-    if (isButton) {
-        return (
-            <NavLink
-                to={to}
-                className={({ isActive }) =>
-                    `px-6 py-2.5 rounded-full border-2 border-brand-dark transition-all duration-300 ${
-                        isActive 
-                        ? "bg-brand-dark text-white" 
-                        : "bg-transparent text-brand-dark hover:bg-brand-dark hover:text-white"
-                    }`
-                }
-            >
-                {nombre}
-            </NavLink>
-        );
-    }
-
+const NavItem = ({ nombre, to }) => {
 	return (
 		<NavLink
 			to={to}
