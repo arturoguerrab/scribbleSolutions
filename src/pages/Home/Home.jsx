@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from './sections/Hero'
 import WeHave from './sections/WeHave'
 import Steps from './sections/Steps'

@@ -2,46 +2,40 @@
 @plugin "daisyui";
 
 @theme {
-  /* Brand Colors (Pure CMYK Tones for Printing) */
-  --color-brand-blue: #00AEFF;   /* Process Cyan */
-  --color-brand-pink: #EC008C;   /* Process Magenta */
-  --color-brand-yellow: #FFF200; /* Process Yellow */
-  --color-brand-purple: #662D91; /* Deep Purple/Violet */
-  --color-brand-dark: #1A1A1A;   /* Rich Black */
-  
-  /* Modern Studio Palette */
-  --color-brand-cream: #FFFFFF;  /* Restored Clean White Base */
-  --color-brand-jungle: #064E3B; /* Keeping for specialized accents if needed */
-  
-  /* Shared Colors (from design) */
-  --color-text-primary: #1A1A1A;
-  --color-text-secondary: #4B5563;
+	/* Brand Colors (Pure CMYK Tones for Printing) */
+	--color-brand-blue: #00aeff; /* Process Cyan */
+	--color-brand-pink: #ec008c; /* Process Magenta */
+	--color-brand-yellow: #fff200; /* Process Yellow */
+	--color-brand-purple: #662d91; /* Deep Purple/Violet */
+	--color-brand-dark: #1a1a1a; /* Rich Black */
+	--color-brand-light: #ffffff;
 
-  /* Typography */
-  --font-brand: "Inter", sans-serif;
+	/* Typography */
+	--font-brand: "Inter", sans-serif;
 
-  /* Custom Animations */
-  --animate-bounce-slow: bounce-slow 3s infinite;
+	/* Custom Animations */
+	--animate-bounce-slow: bounce-slow 3s infinite;
 
-  @keyframes bounce-slow {
-    0%, 100% {
-      transform: translateY(-5%);
-      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-    }
-    50% {
-      transform: translateY(0);
-      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    }
-  }
+	@keyframes bounce-slow {
+		0%,
+		100% {
+			transform: translateY(-5%);
+			animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+		}
+		50% {
+			transform: translateY(0);
+			animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+		}
+	}
 
-  @keyframes draw {
-    from {
-      stroke-dashoffset: 1;
-    }
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
+	@keyframes draw {
+		from {
+			stroke-dashoffset: 1;
+		}
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
 }
 
 :root {
@@ -73,9 +67,9 @@ body {
 .swiper {
 	width: 240px;
 	height: 320px;
-  }
-  
-  .swiper-slide {
+}
+
+.swiper-slide {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -83,74 +77,60 @@ body {
 	font-size: 22px;
 	font-weight: bold;
 	color: #fff;
-  }
-  
-  .swiper-slide:nth-child(1n) {
+}
+
+.swiper-slide:nth-child(1n) {
 	background-color: rgb(206, 17, 17);
-  }
-  
-  .swiper-slide:nth-child(2n) {
+}
+
+.swiper-slide:nth-child(2n) {
 	background-color: rgb(0, 140, 255);
-  }
-  
-  .swiper-slide:nth-child(3n) {
+}
+
+.swiper-slide:nth-child(3n) {
 	background-color: rgb(10, 184, 111);
-  }
-  
-  .swiper-slide:nth-child(4n) {
+}
+
+.swiper-slide:nth-child(4n) {
 	background-color: rgb(211, 122, 7);
-  }
-  
-  .swiper-slide:nth-child(5n) {
+}
+
+.swiper-slide:nth-child(5n) {
 	background-color: rgb(118, 163, 12);
-  }
-  
-  .swiper-slide:nth-child(6n) {
+}
+
+.swiper-slide:nth-child(6n) {
 	background-color: rgb(180, 10, 47);
-  }
-  
-  .swiper-slide:nth-child(7n) {
+}
+
+.swiper-slide:nth-child(7n) {
 	background-color: rgb(35, 99, 19);
-  }
-  
-  .swiper-slide:nth-child(8n) {
+}
+
+.swiper-slide:nth-child(8n) {
 	background-color: rgb(0, 68, 255);
-  }
-  
-  .swiper-slide:nth-child(9n) {
+}
+
+.swiper-slide:nth-child(9n) {
 	background-color: rgb(218, 12, 218);
-  }
-  
-  .swiper-slide:nth-child(10n) {
+}
+
+.swiper-slide:nth-child(10n) {
 	background-color: rgb(54, 94, 77);
-  }
+}
 
-  @keyframes bounce-slow {
-	0%, 100% {
-	  transform: translateY(-5%);
-	  animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-	}
-	50% {
-	  transform: translateY(0);
-	  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-	}
-  }
-  .animate-bounce-slow {
-	animation: bounce-slow 3s infinite;
-  }
+/* Paper Texture utility */
+.paper-texture {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+	opacity: 0.03;
+	mix-blend-mode: multiply;
+}
 
-  /* Paper Texture utility */
-  .paper-texture {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.03;
-    mix-blend-mode: multiply;
-  }
-
-  .animate-draw {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-    animation: draw 2.5s ease-out forwards;
-  }
+.animate-draw {
+	stroke-dasharray: 1;
+	stroke-dashoffset: 1;
+	animation: draw 2.5s ease-out forwards;
+}
